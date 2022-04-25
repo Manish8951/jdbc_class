@@ -1,0 +1,20 @@
+package com.xworkz.hibernatedemo.entity;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.Persistence;
+
+public class RestorentJpaDao {
+	
+	EntityManagerFactory emfactory = Persistence.createEntityManagerFactory( "manish" );
+    
+    EntityManager entitymanager = emfactory.createEntityManager( );
+    entitymanager.getTransaction( ).begin( );
+
+       entitymanager.persist( employee );
+    entitymanager.getTransaction( ).commit( );
+
+    entitymanager.close( );
+    emfactory.close( );
+
+}
